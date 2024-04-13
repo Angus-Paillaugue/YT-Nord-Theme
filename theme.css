@@ -456,12 +456,12 @@
 
  /* Music/Video buttons */
  ytmusic-av-toggle[playback-mode=ATV_PREFERRED] .song-button.ytmusic-av-toggle {
-   background-color: rgb(var(--nord8)) !important;
+   background-color: rgb(var(--nord6)) !important;
    color: rgb(var(--nord0)) !important;
  }
 
  ytmusic-av-toggle[playback-mode=OMV_PREFERRED] .video-button.ytmusic-av-toggle {
-   background-color: rgb(var(--nord8)) !important;
+   background-color: rgb(var(--nord6)) !important;
    color: rgb(var(--nord0)) !important;
  }
 
