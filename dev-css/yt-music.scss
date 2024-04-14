@@ -23,10 +23,6 @@
   --ytmusic-search-background: #{$nord0}; // Search hints bg
   --yt-spec-brand-background-primary: #{$nord0} !important; // Settings confirm change modal
 }
-// App main play pause button
-#icon {
-  --iron-icon-fill-color: #{$nord2} !important;
-}
 // Settings modal sidebar selected item 
 .category-menu-item.iron-selected.ytmusic-settings-page { 
   background-color: #{$nord1} !important;

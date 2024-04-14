@@ -22,7 +22,6 @@ mkdir ./temp
 rsync -av --exclude-from='./omit.txt' "$directory_to_zip" ./temp
 
 # Zip the temporary directory
-rm ./build.zip
 cd ./temp
 zip -r ../build.zip ./
 cd ../
