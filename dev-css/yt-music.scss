@@ -1,0 +1,204 @@
+@use 'sass:color';
+@import "../nord";
+
+// DEV : sass --watch ./dev-css/yt-music.scss:./prod-css/yt-music.css --style expanded --no-source-map
+
+* {
+  --ytmusic-player-page-background: #{$nord0} !important; // Page bg
+  --ytmusic-player-bar-background: #{$nord0} !important; // Bottom player bar bg
+  --paper-progress-active-color: #{$nord8}; // Song progress bar bg 
+  --iron-icon-fill-color: #{$nord6} !important; // Icons colors
+  --ytmusic-play-button-loading-indicator-color: #{$nord6} !important; // Spinners
+  --paper-slider-knob-color: #{$nord6} !important; // Song progress slider knob
+  --ytmusic-nav-bar: #{$nord0} !important; // Mobile sidebar bg
+  --ytmusic-detail-header: #{$nord0} !important; // Playlist header bg
+  --ytmusic-brand-background-solid: #{$nord0} !important; // Dropdowns bg
+  --yt-spec-menu-background: #{$nord0} !important; // User account dropdown
+  --ytmusic-play-button-background-color: #{$nord6} !important; // Play button round bg
+  --ytmusic-play-button-icon-size: 32px !important; // Play button icon size
+  --paper-toggle-button-checked-button-color: #{$nord8} !important; // Toggle switch knob
+  --paper-input-container-focus-color: #{$nord8} !important; // Select input focus underline
+  --paper-dialog-background-color: #{$nord8} !important; // Modal bg
+  --ytmusic-search-border: #{$nord3} !important; //Search input border
+  --ytmusic-search-background: #{$nord0}; // Search hints bg
+  --yt-spec-brand-background-primary: #{$nord0} !important; // Settings confirm change modal
+}
+// App main play pause button
+#icon {
+  --iron-icon-fill-color: #{$nord2} !important;
+}
+// Settings modal sidebar selected item 
+.category-menu-item.iron-selected.ytmusic-settings-page { 
+  background-color: #{$nord1} !important;
+}
+.category-menu-item.ytmusic-settings-page:focus:not(.iron-selected) {
+  background-color: #{$nord1} !important;
+}
+// Some buttons color
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--text {
+  color: #{$nord8} !important;
+  &:hover {
+    background-color: transparentize($nord8, $amount: .2);
+  }
+}
+// Settings dialog
+ytmusic-dialog {
+  background-color: #{$nord0} !important;
+}
+// Toggle switch bar
+tp-yt-paper-toggle-button[checked]:not([disabled]) .toggle-bar.tp-yt-paper-toggle-button {
+  background-color: transparentize($nord8, 0.4) !important;
+}
+// Navbar active section bg
+yt-icon.icon.ytmusic-play-button-renderer {
+  --iron-icon-fill-color: #{$nord1} !important;
+}
+.content-wrapper.ytmusic-play-button-renderer {
+  color: #{$nord6} !important;
+}
+// Song hover play icon bg
+ytmusic-play-button-renderer:hover .content-wrapper.ytmusic-play-button-renderer, ytmusic-play-button-renderer:focus .content-wrapper.ytmusic-play-button-renderer {
+  background: transparentize($nord6, 0.2) !important;
+}
+.content-wrapper.ytmusic-play-button-renderer yt-icon {
+  --iron-icon-fill-color: #{$nord0} !important;
+}
+/*Unique to the desktop ytmdesktop app*/
+i.material-icons
+
+ /*The icons they added;
+ not present on the web version*/ {
+  color: #{$nord8} !important;
+}
+
+i.material-icons:hover {
+  color: #{$nord8} !important;
+}
+
+/*Unique to the desktop ytmdesktop app*/
+body {
+  background: #{$nord0} !important;
+}
+
+#guide-wrapper {
+  background: #{$nord0} !important;
+}
+
+// Sidebar items
+ytmusic-guide-entry-renderer tp-yt-paper-item {
+  background-color: transparent !important;
+  &:hover {
+    background-color: #{$nord2};
+  }
+}
+
+/*hide the youtube logo at the top left*/
+.yt-simple-endpoint[aria-label="Home"] {
+  visibility: hidden !important;
+}
+// Navbar
+ytmusic-nav-bar {
+  background-color: #{$nord0} !important;
+  border-bottom: 1px solid #{$nord1} !important;
+}
+
+// fix the latest ambient update overriding the colors
+div.background-gradient.style-scope.ytmusic-browse-response {
+  /* background-repeat: no-repeat; */
+  background-image: linear-gradient(
+    to bottom,
+    #{$nord0},
+    #{$nord0}
+  ) !important;
+}
+
+/* My styles */
+
+/* Song progress bar (color and smooth animation) */
+#primaryProgress {
+  transition: transform 0.3s linear !important;
+}
+
+#sliderKnob {
+  transition: all 0.3s linear !important;
+}
+
+/* Side bar toggle animation */
+#contentContainer,
+#guide {
+  transition: all 0.3s ease-in-out !important;
+}
+
+#mini-guide {
+  animation: slide-in 150ms ease-in-out !important;
+  border-right: 1px solid #{$nord1};
+}
+
+ytmusic-app-layout:not([is-mweb-modernization-enabled]) > [slot="player-page"] {
+  transition-property: all !important;
+}
+
+#mini-guide-background {
+  transition: all 150ms ease-in-out !important;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Music/Video buttons */
+ytmusic-av-toggle[playback-mode="ATV_PREFERRED"] .song-button.ytmusic-av-toggle {
+  background-color: #{$nord6} !important;
+  color: #{$nord0} !important;
+}
+
+ytmusic-av-toggle[playback-mode="OMV_PREFERRED"] .video-button.ytmusic-av-toggle {
+  background-color: #{$nord6} !important;
+  color: #{$nord0} !important;
+}
+
+/* Auto-play toggle */
+ytmusic-chip-cloud-chip-renderer[chip-style="STYLE_TRANSPARENT"] a.ytmusic-chip-cloud-chip-renderer {
+  /* background: #{$nord8} !important; */
+  color: #{$nord0} !important;
+}
+
+/* Toast */
+tp-yt-paper-toast {
+  background-color: #{$nord0} !important;
+  color: #{$nord8} !important;
+}
+
+/* Buttons icon override */
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--filled yt-icon, ytmusic-chip-cloud-chip-renderer[chip-style=STYLE_TRANSPARENT] a.ytmusic-chip-cloud-chip-renderer yt-icon {
+  --iron-icon-fill-color: #{$nord0} !important;
+}
+
+@media (max-width: 935px) {
+  ytmusic-app[is-bauhaus-sidenav-enabled] tp-yt-app-drawer.ytmusic-app {
+    z-index: 7 !important;
+  }
+
+  ytmusic-guide-renderer[is-mweb-player-bar-modernization-enabled][player-visible] #sections.ytmusic-guide-renderer {
+    max-height: 100% !important;
+  }
+}
+
+//  Chip
+ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][is-selected]:not(.iron-selected) a.ytmusic-chip-cloud-chip-renderer {
+  background: #{$nord8} !important;
+}
+
+// Search input
+ytmusic-search-box[is-bauhaus-sidenav-enabled]:not([opened]):not([has-query]) .search-box.ytmusic-search-box {
+  background-color: transparentize($nord1, $amount: .2) !important;
+}
+ytmusic-search-box[has-query] .search-container.ytmusic-search-box, ytmusic-search-box[opened] .search-container.ytmusic-search-box {
+  box-shadow: none !important;
+}

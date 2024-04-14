@@ -1,0 +1,37 @@
+@import "../nord";
+// DEV : sass --watch ./dev-css/yt-studio.scss:./prod-css/yt-studio.css --style expanded --no-source-map
+
+* {
+  --ytcp-general-background-a: #{$nord0} !important; /* Page background */
+  --ytcp-text-primary-inverse: #{$nord0} !important; /* Some related colors */
+  --ytcp-brand-background-solid: #{$nord1} !important; /* Main primary color */
+  --ytcp-themed-red: #{$nord8} !important; /* Accent color */
+  --ytcp-call-to-action-raised-background: #{$nord8} !important; /* Accent color */
+  --ytcp-call-to-action: #{$nord8} !important; /* Accent color */
+  --yt-spec-call-to-action: #{$nord8} !important; /* Accent color */
+  --dot-color: #{$nord8} !important; /* Accent color */
+  --ytcp-button-icon-color: #{$nord1} !important;
+  --ytcp-container-border-color: #{$nord3} !important; /* Search bar */
+  --paper-progress-container-color: #{$nord0} !important; /* Progress bg */
+  --paper-progress-active-color: #{$nord8} !important; /* Progress bg */
+  --ytcp-themed-blue: #{$nord8} !important; /* Some buttons text */
+  --selected-chip-color: #{$nord8} !important; /* Some buttons border */
+  --selected-chip-color: transparentize($nord8, 0.2) !important; /* Some buttons background */
+  --ytcp-focus: #{$nord8} !important; /* Some buttons border on hover/focus */
+  --ytcp-call-to-action-ripple: transparentize($nord8, 0.2) !important; /* Some buttons ripple */
+  --ytcp-general-background-b: transparentize($nord8, 0.5) !important; /* Some icons background */
+  --ytcp-general-background-c: transparentize($nord8, 0.5) !important; /* Some icons background */
+  --ytcp-menu-background: #{$nord0} !important; /* Dialogs background */
+  --ytcp-hover-item: #{$nord1} !important;
+  --ytcp-selected-item: #{$nord0} !important; /* Settings menu select */
+  --paper-radio-button-checked-color: #{$nord8} !important; /* Radio selected item color */
+  --primary-color: #{$nord8} !important;
+  --ytcp-themed-green: #{$nord1} !important; /* Green color */
+  --ytcp-badge-green: transparentize($nord1, 0.2) !important;
+  --ytcp-icon-active: #{$nord8} !important; /* Inputs ans textarea hover border */
+}
+
+// Search input
+#query-input {
+  background-color: #{$nord0};
+}

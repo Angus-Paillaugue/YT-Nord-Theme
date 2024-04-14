@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "YT Music Nord Theme",
-  "description": "Applies the Nord theme to the youtube music website.",
-  "version": "1.0.0",
+  "description": "Applies the Nord theme to youtube.",
+  "version": "1.0.1",
   "icons": {
     "16": "icons/16-icon.png",
     "32": "icons/32-icon.png",
@@ -13,12 +13,17 @@
   "content_scripts": [
     {
       "matches": ["*://music.youtube.com/*"],
-      "css": [ "yt-music.css" ],
+      "css": [ "prod-css/yt-music.css" ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://studio.youtube.com/*"],
+      "css": [ "prod-css/yt-studio.css" ],
       "run_at": "document_start"
     },
     {
       "matches": ["*://www.youtube.com/*"],
-      "css": [ "yt.css" ],
+      "css": [ "prod-css/yt.css" ],
       "run_at": "document_start"
     }
   ]

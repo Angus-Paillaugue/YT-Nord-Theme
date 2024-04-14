@@ -1,0 +1,143 @@
+@use 'sass:color';
+@import "../nord";
+
+// DEV : sass --watch ./dev-css/yt.scss:./prod-css/yt.css --style expanded --no-source-map
+
+* {
+  --yt-spec-base-background: #{$nord0} !important; /* Page background */
+  --yt-spec-10-percent-layer: #{$nord1} !important; /* Border of separators in the sidebar and click effect on some buttons */
+  --yt-spec-badge-chip-background: #{$nord1} !important; /* Bg of the pill buttons */
+  --yt-spec-text-primary: #{$nord6} !important; /* Header text */
+  --yt-endpoint-color: #{$nord4} !important; /* Body text */
+  --yt-spec-text-secondary: #{$nord4} !important; /* Link text */
+  --yt-spec-outline: #{$nord1} !important; /* Border of featured items in the recommendation tab */
+  --yt-spec-menu-background: #{$nord0} !important; /* Notification dropdown bg */
+  --paper-toggle-button-checked-button-color: #{$nord8} !important; /* Toggle button knob */
+  --primary-color: #{$nord8} !important; /* Found it but dk what it changes */
+  --ytd-searchbox-legacy-button-color: #{$nord2} !important; /* Search bar search button */
+  --ytd-searchbox-legacy-button-border-color: #{$nord0} !important; /* Search bar border */
+  --yt-spec-call-to-action: #{$nord8} !important; /* Some links hover color */
+  --yt-spec-static-overlay-background-heavy: #{$nord0} !important; /* Background of duration pill of video on thumbnail */
+  --paper-dialog-background-color: #{$nord0} !important; /* Some modal background */
+  --yt-spec-brand-background-primary: #{$nord0} !important; /* Some modal background */
+  --yt-spec-brand-background-solid: #{$nord0} !important; /* Some modal background */
+  --primary-text-color: #{$nord6} !important;
+  --ytd-searchbox-background: #{$nord0} !important; // Search input bg
+  --ytd-searchbox-legacy-border-color: #{$nord3} !important; // Search input bg
+  --yt-spec-static-brand-red: #{$nord10} !important;
+}
+
+/* Top navbar */
+#background {
+  background-color: #{$nord1} !important;
+  // border-bottom: 1px solid #{$nord1};
+}
+
+/* Sidebar */
+#guide-content.ytd-app,
+ytd-mini-guide-renderer {
+  background-color: #{$nord1} !important;
+  // border-right: 1px solid #{$nord1};
+}
+
+/* Sidebar items */
+ytd-mini-guide-entry-renderer,
+ytd-guide-entry-renderer {
+  background: transparent !important;
+}
+
+ytd-mini-guide-entry-renderer:hover,
+ytd-guide-entry-renderer:hover {
+  background: #{$nord0} !important;
+}
+
+#endpoint.yt-simple-endpoint.ytd-guide-entry-renderer:hover,
+#endpoint.yt-simple-endpoint.ytd-guide-entry-renderer:focus {
+  background-color: transparent !important;
+}
+
+/* Pill buttons */
+yt-chip-cloud-chip-renderer[chip-style="STYLE_DEFAULT"][selected],
+yt-chip-cloud-chip-renderer[chip-style="STYLE_HOME_FILTER"][selected] {
+  --yt-spec-text-primary: #{$nord8} !important;
+}
+
+/* Cinematics (color imertion around the video player) */
+#cinematics-container {
+  display: none;
+}
+
+/* Feature section button */
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--outline {
+  border-color: #{$nord1} !important;
+}
+
+/* Buttons */
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--filled {
+  background-color: #{$nord4} !important;
+}
+/* Like, dislike, share, download, ... buttons */
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal {
+  background-color: #{$nord1} !important;
+}
+
+/* Expand comments button */
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--text {
+  color: #{$nord8} !important;
+}
+
+/* Notification bell : number of notifications  */
+.yt-spec-icon-badge-shape--type-notification .yt-spec-icon-badge-shape__badge {
+  background-color: #{$nord1} !important;
+  color: #{$nord6} !important;
+  background-color: #{$nord10} !important;
+  border: 2px solid #{$nord10} !important;
+}
+
+/* Notification dropdown */
+ytd-multi-page-menu-renderer {
+  border: 1px solid #{$nord1} !important;
+}
+
+/* Settings button in notifications dropdown */
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--text:hover {
+  background-color: #{$nord1} !important;
+}
+
+/* Voice search */
+#voice-search-button.ytd-masthead {
+  background-color: #{$nord2} !important;
+}
+
+/* Join button on channel */
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--outline {
+  color: #{$nord8} !important;
+  &:hover {
+    background-color: transparentize($nord8, 0.8)  !important;
+  }
+}
+
+/* Verified badge */
+ytd-badge-supported-renderer[system-icons]
+  .badge-style-type-verified.ytd-badge-supported-renderer
+  yt-icon.ytd-badge-supported-renderer,
+ytd-badge-supported-renderer[system-icons]
+  .badge-style-type-verified-artist.ytd-badge-supported-renderer
+  yt-icon.ytd-badge-supported-renderer,
+ytd-badge-supported-renderer[system-icons]
+  .badge-style-type-collection.ytd-badge-supported-renderer
+  yt-icon.ytd-badge-supported-renderer,
+ytd-badge-supported-renderer[system-icons]
+  .badge-style-type-ypc-transparent.ytd-badge-supported-renderer
+  yt-icon.ytd-badge-supported-renderer {
+  color: #{$nord8} !important;
+}
+
+.yt-core-attributed-string__link--call-to-action-color {
+  color: #{$nord8} !important;
+}
+
+// Hide YouTube logo in navbar
+ytd-topbar-logo-renderer { 
+  visibility: hidden;
+}

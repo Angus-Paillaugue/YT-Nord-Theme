@@ -1,5 +1,10 @@
 #!/bin/bash
 
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+cd $SCRIPT_DIR
+
+
 # Directory to zip
 directory_to_zip="../"
 
@@ -17,8 +22,9 @@ mkdir ./temp
 rsync -av --exclude-from='./omit.txt' "$directory_to_zip" ./temp
 
 # Zip the temporary directory
+rm ./build.zip
 cd ./temp
-zip -r ../buld.zip ./
+zip -r ../build.zip ./
 cd ../
 
 # Remove temporary directory

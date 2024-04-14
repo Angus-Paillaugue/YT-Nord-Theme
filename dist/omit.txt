@@ -2,3 +2,7 @@ README.md
 .git
 dist
 store
+dev-css
+nord.scss
+.gitignore
+compile.sh
