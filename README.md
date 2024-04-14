@@ -1,9 +1,11 @@
 
 # Preview
 
-![Home page](store/Img_1.png)
-![Playing music](store/Img_2.png)
-![Artist page](store/Img_3.png)
+![YouTube's home page](store/Img_1.png)
+![Playing a video](store/Img_2.png)
+![YouTube Music's home page](store/Img_3.png)
+![Playing a song](store/Img_4.png)
+![YouTube Studio's home page](store/Img_5.png)
 
 
 # Installing for the web
