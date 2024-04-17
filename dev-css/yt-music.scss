@@ -46,7 +46,7 @@ tp-yt-paper-toggle-button[checked]:not([disabled]) .toggle-bar.tp-yt-paper-toggl
   background-color: transparentize($nord8, 0.4) !important;
 }
 // Navbar active section bg
-yt-icon.icon.ytmusic-play-button-renderer {
+#play-pause-button tp-yt-iron-icon {
   --iron-icon-fill-color: #{$nord1} !important;
 }
 .content-wrapper.ytmusic-play-button-renderer {
