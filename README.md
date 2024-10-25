@@ -10,7 +10,7 @@
 
 # Installing for the web
 
-To use this theme on the web, you gust have to install this extension. To do so, go to the [Chrome web store](https://github.com/Angus-Paillaugue/YT-Music-Nord-Theme) then click on install. That's it!
+To use this theme on the web, you just have to install this extension. To do so, go to the [Chrome web store](https://github.com/Angus-Paillaugue/YT-Music-Nord-Theme) then click on install. That's it!
 
 
 # Installing for an app
